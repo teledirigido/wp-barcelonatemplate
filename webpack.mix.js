@@ -59,10 +59,13 @@ mix.sass(
     }
   }
 })
-.sourceMaps()
-.webpackConfig({
-  devtool: 'source-map'
-});
+
+if ( !mix.inProduction() ){
+  mix.sourceMaps()
+  mix.webpackConfig({
+    devtool: 'source-map'
+  });
+}
 
 
 // Javascript

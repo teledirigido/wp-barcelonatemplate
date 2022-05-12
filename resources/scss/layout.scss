@@ -1,0 +1,6 @@
+@use '@/theme/variables' as var;
+
+body {
+  font-family: var.$bodyFont;
+  font-size: var.$bodyFontSize;
+}

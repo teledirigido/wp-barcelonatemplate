@@ -1,0 +1,150 @@
+@use '@/global/mediaqueries' as mq;
+
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,
+h5,h6,pre,form,fieldset,input,textarea,
+p,blockquote,th,td,figure,nav,main,video,
+button,article,section {
+  margin:0; 
+  padding:0; 
+  box-sizing: border-box;
+}
+  
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+  display: block;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-weight: normal;
+} 
+
+::selection {
+  background: #5FC598; 
+  color:white;
+}
+
+::-moz-selection {
+  background: #5FC598; 
+  color:#fff; 
+}
+
+a {
+  text-decoration:none;
+  outline:0 none;
+  color:inherit;
+}
+
+a img {
+  border:0 none;
+}
+
+hr {
+  border:0 none;
+  display:block;
+}
+
+blockquote {
+  margin-left:25px; 
+}
+
+fieldset {
+  border: none;
+}
+
+input[type="submit"] {
+  border:0 none; 
+}
+
+.d-inline  {
+  display:inline
+}
+
+.d-inline-block {
+  display: inline-block
+}
+
+.none, .ui-tabs-hide  {
+  height:0 !important;
+  width:0 !important;
+  opacity:0;
+  display:none !important;
+}
+
+.hide {
+  text-indent: -9999999px;
+}
+
+.hidden {
+  visibility:hidden;
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.block {
+  display: block;
+  box-sizing: border-box;
+}
+
+img.block-full {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.lowercase {
+  text-transform: lowercase;
+}
+
+.text-center {
+  text-align: center;
+  @include mq.desktop {
+  &--desktop {
+      text-align: center;
+    }
+  }
+  @include mq.nonmobile {
+    &--nonmobile {
+      text-align: center;
+    }
+  }
+}
+
+.text-right {
+  text-align: right
+}
+    
+.nowrap {
+  white-space:nowrap;
+}
+
+.whitenormal {
+  white-space: normal;
+  vertical-align: top;
+}
+  
+.vsub {
+  vertical-align: sub;
+}
+
+.mx-auto {
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.ws-break-spaces {
+  white-space: break-spaces;
+}
+
+.ws-pre-line {
+  white-space:pre-line;
+}

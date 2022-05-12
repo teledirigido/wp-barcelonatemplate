@@ -1,0 +1,33 @@
+@use "@/global/mediaqueries" as mq;
+@use "@/global/functions" as fn;
+
+.fsz40 {
+  font-size: fn.rem(40px);
+  line-height: fn.rem(49px);
+  @include mq.tablet {
+    font-size: fn.rem(32px);
+    line-height:135%;
+  }
+  @include mq.mobile {
+    font-size: fn.rem(24px);
+    line-height:135%;
+  }
+}
+
+.fsz20 {
+  font-size: fn.rem(20px);
+  line-height: fn.rem(30px);
+}
+
+.fsz28 {
+  font-size: fn.rem(28px);
+  line-height: fn.rem(38px);
+  @include mq.mobile {
+    font-size: fn.rem(21px);
+    line-height:135%;
+  }
+}
+
+.flight {
+  font-weight:100;
+}

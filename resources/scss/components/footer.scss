@@ -1,0 +1,146 @@
+@use '/resources/scss/global/mediaqueries' as mq;
+@use '/resources/scss/global/functions' as fn;
+@use 'resources/scss/theme/variables' as var;
+
+.footer-wrapper {
+  padding-top:3rem;
+  padding-bottom:3rem;
+  background-size:400px;
+  background-repeat:no-repeat;
+  background-position:-120px 0;
+  display:flex;
+  justify-content: space-between;
+  position: relative;
+
+  @include mq.nondesktop {
+    flex-direction: column;
+  }
+
+  .footer--logo {
+    @include mq.nondesktop {
+      padding-bottom:1rem;
+    }
+  }
+
+  .footer--cta {
+    @include mq.desktop {
+      padding-left:2rem;
+      padding-right:1rem;
+    }
+    @include mq.nonmobile {
+      max-width:440px;
+    }
+  }
+
+  .footer--contact {
+    display:flex;
+    flex-direction: column;
+    font-size:fn.rem(14px);
+    a {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    @include mq.desktop {
+      justify-content: flex-end;
+      align-items:flex-end;
+    }
+  }
+  .ul-horz {
+    list-style:none;
+  }
+
+  .flex-logos {
+    display: flex;
+    align-items:center;
+    padding-top: 2rem;
+    .item {
+      &:last-child {
+        padding-right: 0;
+      }
+    }
+    img {
+      display: block;
+      width:150px;
+      max-height:auto;
+    }
+    @include mq.nondesktop {
+      // flex-wrap: wrap;
+      img { 
+        width:100%; 
+        height:auto;
+      }
+    }
+    @include mq.mobile {
+      padding-bottom:2rem;
+    }
+  }
+
+  @include mq.mobile {
+    .footer--contact,
+    .footer--cta { width:100%; }
+  }
+
+}
+
+.flex-addresses {
+  display:flex;
+  .item {
+    padding-right:2vw;
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+  @include mq.nondesktop {
+    flex-wrap:wrap;
+  }
+
+}
+
+.footer--image {
+  position: absolute;
+  bottom:0;
+  left:0;
+  z-index:10;
+  img {
+    display: block; 
+    max-height: 270px;
+    width:auto
+  }
+}
+
+@media all and (max-width:1280px) {
+  .footer-wrapper {
+    flex-wrap:wrap;
+  }
+  
+  .footer--contact,
+  .footer--logo {
+    // flex-grow:1;
+    width:100%;
+    padding-bottom: 1rem;
+  }
+  .footer--cta {
+    padding-left: 0;
+    padding-bottom:1rem;
+    width:30%;
+  }
+  .footer--contact {
+    align-items: flex-start;
+    width:70%;
+  }
+
+  .footer--contact,
+  .footer--cta,
+  .footer--logo { 
+    position: relative;
+    z-index:10;
+  }
+  .footer--image {
+    opacity:0.3;
+    z-index:0;
+    img {
+      max-height:100%;
+    }
+  }
+}

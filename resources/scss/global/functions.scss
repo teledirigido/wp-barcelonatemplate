@@ -1,0 +1,26 @@
+@use '@/global/mediaqueries' as mq;
+@use '@/theme/variables' as var;
+
+@function rem($value) {
+    $remValue: ($value / var.$bodyFontSize) + rem; 
+    @return $remValue;
+}
+
+@mixin c-wrapper($value) {
+    max-width: $value;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+        
+    @media screen and ( max-width: #{$value+50px}) {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    @include mq.mobile {
+        max-width: 492px;
+        width: 100%;
+        min-width: 320px;
+    }    
+}

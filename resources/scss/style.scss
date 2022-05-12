@@ -1,0 +1,22 @@
+@use 'theme/licence';
+
+// Global or boilerplate styles
+@use 'global/reset';
+@use 'global/mediaqueries' as mq;
+@use 'global/functions' as  fn;
+@use 'global/gaps';
+@use 'global/grid';
+
+// Theme styles
+@use 'theme/variables' as var;
+@use 'theme/colours';
+@use 'theme/fonts';
+
+
+// Components
+@use "components/header";
+@use "components/footer";
+@use "components/buttons";
+
+// Layout
+@use "layout";

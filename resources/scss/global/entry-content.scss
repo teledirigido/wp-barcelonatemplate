@@ -1,0 +1,8 @@
+@use '@/global/functions' as fn;
+@use '@/global/variables' as var;
+
+.entry-content {
+  font-size: fn.rem(var.$entryContentFontSize);
+  line-height: 155%;
+  font-weight: 300;
+}

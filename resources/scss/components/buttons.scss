@@ -1,0 +1,40 @@
+@use "resources/scss/global/mediaqueries" as mq;
+@use "resources/scss/global/functions" as fn;
+@use 'resources/scss/theme/variables' as var;
+
+.button {
+  color: var.$white;
+  display: inline-block;
+  padding:0.75rem 1.5rem;
+  border-radius:13px;
+
+  &--default {
+    font-size: fn.rem(30px);
+    padding: 0.75rem 1.5rem;
+    @include mq.mobile {
+      font-size: fn.rem(21px);
+    }
+  }
+
+  &--small {
+    font-size: 20px;
+  }
+
+  &--red {
+    background: var.$red;
+    transition: background ease 300ms;
+    &:hover {
+      background: darken(var.$red, 10%);
+    }
+  }
+
+  &--white {
+    background: var.$white;
+    color: var.$red;
+    transition: background ease 300ms;
+    &:hover {
+      background: darken(var.$white, 10%);
+    }
+  }
+
+}

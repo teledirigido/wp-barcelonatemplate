@@ -1,0 +1,44 @@
+@use '@/global/mediaqueries' as mq;
+
+@for $i from 1 through 5 {
+  .pt#{$i} {
+    padding-top: $i+rem;
+  }
+  .pb#{$i} {
+    padding-bottom: $i+rem;
+  }
+  .mt#{$i} {
+    margin-top: $i+rem;
+  }
+  .mt#{$i} {
+    margin-bottom: $i+rem;
+  }
+  .p#{$i} {
+    padding: $i+rem;
+  }
+}
+
+.pt05 { padding-top: 0.5rem; }
+.pb05 { padding-bottom: 0.5rem; }
+
+@include mq.nondesktop {
+ @for $i from 1 through 5 {
+   .pt#{$i}--nondesktop {
+      padding-top: $i+rem;
+    }
+    .pb#{$i}--nondesktop {
+      padding-bottom: $i+rem;
+    }
+  }
+}
+
+@include mq.mobile {
+ @for $i from 1 through 5 {
+   .pt#{$i}--mobile {
+      padding-top: $i+rem;
+    }
+    .pb#{$i}--mobile {
+      padding-bottom: $i+rem;
+    }
+  }
+}

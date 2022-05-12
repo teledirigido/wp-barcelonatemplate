@@ -1,4 +1,4 @@
-# WP Paris Template 
+# WP Barcelona Template 
 
 This is an opinionated Wordpress starter theme that uses Laravel Mix, Stylus, ACF and modern JS. Includes postcss, several polyfills, utility wordpress actions and filters that will help you to start crafting your wordpress themes right away.
 

@@ -9,7 +9,7 @@ let mix = require('laravel-mix');
 let mediaQueries = require(`./${assetsFolder}/scripts/mediaQueries`);
 
 const browserSyncOptions = {
-  proxy: 'paristemplate.local',
+  proxy: 'nk.local',
   startPath: startPath,
   watch: true,
   reload: true,
@@ -44,14 +44,6 @@ mix.options({
   ],
 });
 
-// if (!mix.inProduction()) {
-//   // mix.webpackConfig({
-//   //   devtool: 'inline-source-map'
-//   // })
-// }
-
-mix.sourceMaps()
-
 // CSS, SCSS
 mix.sass(
   `${assetsFolder}/scss/style.scss`, 
@@ -67,7 +59,14 @@ mix.sass(
       '@': path.resolve('/resources/scss')
     }
   }
-});
+})
+
+if ( !mix.inProduction() ){
+  mix.sourceMaps()
+  mix.webpackConfig({
+    devtool: 'source-map'
+  });
+}
 
 
 // Javascript

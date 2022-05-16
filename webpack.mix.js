@@ -9,7 +9,7 @@ let mix = require('laravel-mix');
 let mediaQueries = require(`./${assetsFolder}/scripts/mediaQueries`);
 
 const browserSyncOptions = {
-  proxy: 'nk.local',
+  proxy: 'localhost',
   startPath: startPath,
   watch: true,
   reload: true,

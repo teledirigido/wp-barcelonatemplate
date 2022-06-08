@@ -46,19 +46,19 @@ class PostTypeRegister {
   
   public function register() {
 
-    $labels = array(
+     $labels = array(
       'name'               => ucfirst($this->plural),
       'singular_name'      => ucfirst($this->singular),
       'menu_name'          => ucfirst($this->plural),
-      'add_new'            => 'Añadir nuevo',
-      'add_new_item'       => 'Añadir nuevo',
-      'edit_item'          => 'Editar ' . ucfirst($this->singular),
-      'new_item'           => 'Nueva ' . ucfirst($this->singular),
+      'add_new'            => __('Add New'),
+      'add_new_item'       => __('Add New'),
+      'edit_item'          => __('Edit ' . ucfirst($this->singular)),
+      'new_item'           => __('New ' . ucfirst($this->singular)),
       'all_items'          => ucfirst($this->plural),
-      'view_item'          => 'Ver ' . ucfirst($this->singular),
-      'search_items'       => 'Buscar ' . ucfirst($this->plural),
-      'not_found'          => 'No hay ' . $this->plural,
-      'not_found_in_trash' => 'No hay ' . $this->plural . ' en la papelera'
+      'view_item'          => 'View ' . ucfirst($this->singular),
+      'search_items'       => 'Search ' . ucfirst($this->plural),
+      'not_found'          => 'No ' . $this->plural . ' found',
+      'not_found_in_trash' => 'No ' . $this->plural . ' found in trash'
     );
 
     $default_args = array(

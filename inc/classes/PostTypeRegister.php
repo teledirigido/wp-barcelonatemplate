@@ -54,7 +54,7 @@ class PostTypeRegister {
       'add_new_item'       => __('Add New'),
       'edit_item'          => __('Edit ' . ucfirst($this->singular)),
       'new_item'           => __('New ' . ucfirst($this->singular)),
-      'all_items'          => ucfirst($this->plural),
+      'all_items'          => __('All ' . ucfirst($this->plural)),
       'view_item'          => 'View ' . ucfirst($this->singular),
       'search_items'       => 'Search ' . ucfirst($this->plural),
       'not_found'          => 'No ' . $this->plural . ' found',

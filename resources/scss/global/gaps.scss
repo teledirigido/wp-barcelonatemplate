@@ -1,32 +1,40 @@
 @use '@/global/mediaqueries' as mq;
 
 @for $i from 1 through 5 {
-  .pt#{$i} {
+  .pt-#{$i} {
     padding-top: $i+rem;
   }
-  .pb#{$i} {
+  .pb-#{$i} {
     padding-bottom: $i+rem;
   }
-  .mt#{$i} {
+  .mt-#{$i} {
     margin-top: $i+rem;
   }
-  .mt#{$i} {
+  .mb-#{$i} {
     margin-bottom: $i+rem;
   }
-  .p#{$i} {
+  .p-#{$i} {
     padding: $i+rem;
+  }
+  .py-#{$i} {
+    padding-top: $i+rem;
+    padding-bottom: $i+rem;
+  }
+  .px-#{$i} {
+    padding-left: $i+rem;
+    padding-right: $i+rem;
   }
 }
 
-.pt05 { padding-top: 0.5rem; }
-.pb05 { padding-bottom: 0.5rem; }
+.pt-05 { padding-top: 0.5rem; }
+.pb-05 { padding-bottom: 0.5rem; }
 
 @include mq.nondesktop {
  @for $i from 1 through 5 {
-   .pt#{$i}--nondesktop {
+   .pt-#{$i}--nondesktop {
       padding-top: $i+rem;
     }
-    .pb#{$i}--nondesktop {
+    .pb-#{$i}--nondesktop {
       padding-bottom: $i+rem;
     }
   }
@@ -34,11 +42,30 @@
 
 @include mq.mobile {
  @for $i from 1 through 5 {
-   .pt#{$i}--mobile {
+   .pt-#{$i}--mobile {
       padding-top: $i+rem;
     }
-    .pb#{$i}--mobile {
+    .pb-#{$i}--mobile {
       padding-bottom: $i+rem;
     }
   }
+  @for $i from 3 through 5 {
+   .py-#{$i} {
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+    } 
+    .pt-#{$i} {
+      padding-top: 2rem;
+    }
+    .mt-#{$i} {
+      margin-top: 2rem;
+    }
+    .mb-#{$i} {
+      margin-bottom: 2rem;
+    }
+  }
+}
+
+.p-05 {
+  padding:0.5rem;
 }

@@ -6,7 +6,7 @@
     @return $remValue;
 }
 
-@mixin c-wrapper($value) {
+@mixin contentWrapper($value) {
     max-width: $value;
     width: 100%;
     margin-left: auto;
@@ -23,4 +23,19 @@
         width: 100%;
         min-width: 320px;
     }    
+}
+
+@mixin placeholder {
+    &::-webkit-input-placeholder { 
+        @content;
+    }
+    &:-moz-placeholder { 
+        @content;
+    }
+    &::-moz-placeholder { 
+        @content;
+    }
+    &:-ms-input-placeholder { 
+        @content;
+    }
 }

@@ -7,7 +7,7 @@ $args = array(
   'plural'    => 'Adventures',
   'singular'  => 'adventure',
   'args'      => array(
-    'slug'      => 'adventures',
+    'rewrite'      => ['slug' => 'adventures'],
     'menu_icon' => 'dashicons-admin-site',
     'supports'  => array('title','editor','author')
   ),

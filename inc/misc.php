@@ -1,5 +1,8 @@
 <?php
 
+remove_action('enqueue_block_assets', 'wp_enqueue_registered_block_scripts_and_styles');
+add_filter('use_block_editor_for_post', '__return_false', 10);
+
 add_action( 'after_setup_theme', function(){
   remove_theme_support( 'post-thumbnails' );
 }, 11 ); 

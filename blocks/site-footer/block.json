@@ -1,0 +1,11 @@
+{
+  "apiVersion": 2,
+  "name": "mnz/site-footer",
+  "title": "Site Footer",
+  "category": "widgets",
+  "icon": "admin-site",
+  "supports": {
+      "html": false
+  },
+  "render": "file:./render.php"
+}

@@ -7,7 +7,7 @@ This is an opinionated Wordpress starter theme that uses Laravel Mix, SCSS, ACF 
 2. Install your dependencies: `$ yarn install`  
 3. Customise your Laravel Mix settings on `webpack.mix.js`. Make sure your `startPath` is correct.
 4. Watch your files via `$ npx mix watch`  
-5. Start creating your beautiful Wordpress website.  
+5. Start creating your beautiful Wordpress website.
 
 ## Plugins & Polyfills
 

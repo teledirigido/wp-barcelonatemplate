@@ -1,3 +1,5 @@
+.env
+
 # Don't add the Local settings file to the repository #
 wp-config.php
 wp-config-sample.php

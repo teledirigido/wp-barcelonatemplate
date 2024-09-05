@@ -1,6 +1,11 @@
 @use '@/theme/variables' as var;
+@use "@/global/functions" as fn;
 
 body {
   font-family: var.$bodyFont;
   font-size: var.$bodyFontSize;
+}
+
+.content-wrapper {
+  @include fn.contentWrapper(1200px);
 }

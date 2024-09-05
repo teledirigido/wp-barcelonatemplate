@@ -1,12 +1,5 @@
 <?php
 
-remove_action('enqueue_block_assets', 'wp_enqueue_registered_block_scripts_and_styles');
-add_filter('use_block_editor_for_post', '__return_false', 10);
-
-add_action( 'after_setup_theme', function(){
-  remove_theme_support( 'post-thumbnails' );
-}, 11 ); 
-
 // Show Open Graph
 if(class_exists('open_graph')):
     add_action('wp_head', function(){
@@ -26,10 +19,6 @@ add_action( 'after_setup_theme', function() {
     remove_image_size('large');
     remove_image_size('twentyseventeen');
 });
-
-// Add Title tag support
-add_theme_support( 'title-tag' );
-add_theme_support( 'menus' );
 
 // Remove unused functions
 remove_filter('template_redirect', 'redirect_canonical');
@@ -52,30 +41,4 @@ function wap8_wpcf7_css() {
             wp_deregister_style( 'contact-form-7' ); // deregister Contact Form 7 stylesheet
         }
     }
-}
-
-// Dump everything
-if (!function_exists('dump')) {
-    function dump($in = null) {
-        echo '<pre style="
-            white-space: pre-wrap;
-            margin-left: 0px; 
-            margin-right: 0px; 
-            padding: 10px; 
-            border: solid 5px rgba(50,50,50,.5); 
-            background-color: ghostwhite; 
-            color: black; 
-            text-align: left;">';
-        foreach ( func_get_args() as $var ) {
-            echo "\n";
-            if ( is_string($var) ) {
-                echo "$var\n";
-            } else {
-                var_dump($var);
-            }
-        }
-        echo '</pre>' . "\n";
-        return $in;
-    } # dump()
-
 }

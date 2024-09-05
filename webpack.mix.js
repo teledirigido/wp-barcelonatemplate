@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const startPath = '/';
 const viewsFolder = '.';
 const assetsFolder = 'resources';
@@ -9,7 +11,7 @@ let mix = require('laravel-mix');
 let mediaQueries = require(`./${assetsFolder}/scripts/mediaQueries`);
 
 const browserSyncOptions = {
-  proxy: 'localhost',
+  proxy: process.env.PROXY_URL,
   startPath: startPath,
   watch: true,
   reload: true,

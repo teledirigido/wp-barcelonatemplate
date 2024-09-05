@@ -23,6 +23,13 @@ This is an opinionated Wordpress starter theme that uses Laravel Mix, SCSS, ACF 
 
 ## File & Folder Structure
 
+### /templates
+`index.html`: Base file for FSE editing  
+
+### /blocks
+`/site-header`: Site header block
+`/site-footer`: Site footer block
+
 ### /acf
 `googlemaps.php`: Google Maps api key.  
 `og.php`: Open Graph meta tags for posts and pages, customisable.  
@@ -43,7 +50,8 @@ This is an opinionated Wordpress starter theme that uses Laravel Mix, SCSS, ACF 
 ### /resources
 `/scripts`: JS Scripts.  
 `/scss`: SCSS boilerplate.  
-`/scss/Scss.styl`: Base style layout. Exported as `style.css` on your theme base.  
+`/scss/style.scss`: Base style layout. Exported as `style.css` on your base theme.  
+`/scss/style-admin.scss`: Base style layout used on the admin. Exported as `style-admin.css` on your base theme.  
 
 ### /static
 `/fonts`: Custom fonts.  
@@ -56,7 +64,7 @@ Your Layout SCSS, ready to be customised.
   
 #### `/global`
 
-`functions.styl`: Default mixins and functions.  
+`functions.scss`: Default mixins and functions.  
 `gaps.scss`: Padding and Margin gaps.  
 `grid.scss`: Grid and flex styles.  
 `mediaqueries.scss`: Your mediaqueries, variables are aread from `scripts/mediaQueries.js`  
@@ -66,9 +74,9 @@ Your Layout SCSS, ready to be customised.
 Reusable component elements througout your interfaces.  
 Intented to be modified and filled with your own development.  
   
-`buttons.styl`: Buttons
-`footer.styl`: Footer  
-`header.styl`: Header
+`buttons.scss`: Button component
+`footer.scss`: Footer  
+`header.scss`: Header
 
 #### `/pages` and `/templates`
 For page and tempaltes styles only. Follow the wordpress name nomenclature. A page and a template is higher level than a component

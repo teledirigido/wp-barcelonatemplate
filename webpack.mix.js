@@ -6,6 +6,7 @@ const assetsFolder = 'resources';
 const publicFolder = 'dist';
 const staticFolder = 'static';
 const path = require('path');
+const cssFolder = `assets/css`;
 
 let mix = require('laravel-mix');
 let mediaQueries = require(`./${assetsFolder}/scripts/mediaQueries`);
@@ -50,6 +51,10 @@ mix.options({
 mix.sass(
   `${assetsFolder}/scss/style.scss`, 
   `style.css`
+)
+.sass(
+  `${assetsFolder}/scss/style-admin.scss`, 
+  `${cssFolder}/style-admin.css`
 )
 .options({
   outputStyle: 'nested',

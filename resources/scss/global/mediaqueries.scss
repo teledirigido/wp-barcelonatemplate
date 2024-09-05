@@ -1,22 +1,16 @@
-//============================================================
-// Media Queries
-//============================================================
+@use "@/global/mediaqueries.module" as mq;
 
-$bigdesktop-layout: 1440px;
-$desktop-layout: 960px;
-$mobile-layout: 640px;
-$mobilemenu-layout: 650px;
+$bigdesktop: 'all and (min-width: #{mq.$bigdesktop-layout}px)';
+$desktop: 'all and (min-width: #{mq.$desktop-layout}px)';
+$tablet: 'screen and (min-width: #{mq.$mobile-layout + 1px}) and (max-width: #{mq.$desktop-layout - 1px})';
+$mobile: '(max-width: #{mq.$mobile-layout}px)';
+$smallmobile: 'all and (max-width: #{mq.$small-mobile-layout}px)';
+$mobilemenu: 'all and (max-width: #{mq.$mobilemenu-layout}px)';
 
-$bigdesktop: 'all and (min-width: #{$bigdesktop-layout})';
-$desktop: 'all and (min-width: #{$desktop-layout})';
-$tablet: 'screen and (min-width: #{$mobile-layout + 1px}) and (max-width: #{$desktop-layout - 1px})';
-$mobile: 'all and (max-width: #{$mobile-layout})';
-$mobilemenu: 'all and (max-width: #{$mobilemenu-layout})';
-
-$nonbigdesktop: 'all and (max-width: #{$bigdesktop-layout - 1px})';
-$nondesktop: 'all and (max-width: #{$desktop-layout - 1px})';
-$nonmobile: 'all and (min-width: #{$mobile-layout + 1px})';
-$nonmobilemenu: 'all and (min-width: '+996px+')';
+$nonbigdesktop: 'all and (max-width: #{mq.$bigdesktop-layout - 1px})';
+$nondesktop: 'all and (max-width: #{mq.$desktop-layout - 1px})';
+$nonmobile: 'all and (min-width: #{mq.$mobile-layout + 1px})';
+$nonmobilemenu: 'all and (min-width: #{mq.$mobilemenu-layout + 1px})';
 
 @mixin bigdesktop {
   @media #{$bigdesktop} {
@@ -54,8 +48,32 @@ $nonmobilemenu: 'all and (min-width: '+996px+')';
   } 
 }
 
+@mixin smallmobile {
+  @media #{$smallmobile} {
+     @content;
+   } 
+ }
+
 @mixin nonmobile {
  @media #{$nonmobile} {
     @content;
   } 
+}
+
+@mixin mobilemenu {
+ @media #{$mobilemenu} {
+    @content;
+  }
+}
+
+@mixin nonmobilemenu {
+ @media #{$nonmobilemenu} {
+    @content;
+  }
+}
+
+@mixin darkmode {
+  html[data-theme="dark"] {
+    @content;
+  }
 }

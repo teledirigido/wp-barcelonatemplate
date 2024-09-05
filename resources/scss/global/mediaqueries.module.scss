@@ -1,0 +1,21 @@
+/* * * * * * * * * * * * * * * * * * * * * * * *
+ *
+ * Media Queries Variables
+ *
+ * Shared with scripts.js
+ *
+ *
+ * * * * * * * * * * * * * * * * * * * * * * * */
+
+ $bigdesktop-layout: 1440;
+ $desktop-layout: 960;
+ $mobile-layout: 640;
+ $small-mobile-layout: 520;
+ $mobilemenu-layout: 1120;
+ 
+ :export {
+   bigdesktopLayout: $bigdesktop-layout;
+   desktopLayout: $desktop-layout;
+   mobileLayout: $mobile-layout;
+   mobileMenuLayout: $mobilemenu-layout;
+ }

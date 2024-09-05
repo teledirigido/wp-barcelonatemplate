@@ -1,22 +1,23 @@
-@use 'theme/licence';
+@use "@/theme/licence";
 
 // Global or boilerplate styles
-@use 'global/reset';
-@use 'global/mediaqueries' as mq;
-@use 'global/functions' as  fn;
-@use 'global/gaps';
-@use 'global/grid';
+@use "@/global/reset";
+@use "@/global/mediaqueries" as mq;
+@use "@/global/functions" as  fn;
 
 // Theme styles
-@use 'theme/variables' as var;
-@use 'theme/colours';
-@use 'theme/fonts';
-
+@use "@/theme/gaps";
+@use "@/theme/grid";
+@use "@/theme/variables" as var;
+@use "@/theme/colours";
+@use "@/theme/fonts";
 
 // Components
-@use "components/header";
-@use "components/footer";
-@use "components/buttons";
+@use "@/components/buttons";
+
+// Blocks
+@use "@/blocks/site-header";
+@use "@/blocks/site-footer";
 
 // Layout
 @use "layout";
